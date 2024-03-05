@@ -29,7 +29,7 @@ type Data = {
 export const sourceData: Data = {
   "24.1": {
     RX: [
-      { name: "Suny", time: "9:06", completed: true, score: 0 },
+      { name: "Suny", time: "9:07", completed: true, score: 0 },
       { name: "Luis", time: "10:05", completed: true, score: 0 },
       { name: "Majo", time: "8:12", completed: true, score: 0 },
       { name: "Angeles", time: "12:57", completed: true, score: 0 },
