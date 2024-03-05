@@ -62,7 +62,7 @@ export const sourceData: Data = {
       { name: "Berenice", time: "14:22", completed: true, score: 0 },
       { name: "Yessica", time: "9:56", completed: true, score: 0 },
       { name: "Marta", time: "11:38", completed: true, score: 0 },
-      { name: "Sergio", time: "0", completed: false, score: 0 },
+      { name: "Sergio", time: "12:45", completed: true, score: 0 },
       { name: "Elizabeth", time: "13:55", completed: true, score: 0 },
       { name: "Daniel", time: "11:15", completed: true, score: 0 },
       { name: "Adiel", time: "11:42", completed: true, score: 0 },
