@@ -6,6 +6,12 @@ const useProcessData = () => {
   const { leaderBoardData } = useContext(LeaderBoardContext);
   const [processedData241, setprocessedData241] = useState<PersonData[]>([]);
   const [processedData242, setprocessedData242] = useState<PersonData[]>([]);
+  const [processedData243, setprocessedData243] = useState<PersonData[]>([]);
+
+  const convertToSeconds = (time: string) => {
+    const [minutes, seconds] = time.split(":").map(Number);
+    return minutes * 60 + seconds;
+  };
 
   const processData241 = () => {
     let generalScore241 = 100;
@@ -14,17 +20,9 @@ const useProcessData = () => {
       .sort((a, b) => {
         // Convertir el tiempo a segundos para la comparación
         const timeA =
-          a["24.1"].time === "0"
-            ? Infinity
-            : a["24.1"].time
-                .split(":")
-                .reduce((acc, time) => 60 * acc + Number(time), 0);
+          a["24.1"].time === "0" ? Infinity : convertToSeconds(a["24.1"].time);
         const timeB =
-          b["24.1"].time === "0"
-            ? Infinity
-            : b["24.1"].time
-                .split(":")
-                .reduce((acc, time) => 60 * acc + Number(time), 0);
+          b["24.1"].time === "0" ? Infinity : convertToSeconds(b["24.1"].time);
 
         // Ordenar por tiempo
         if (timeA < timeB) return -1;
@@ -90,11 +88,60 @@ const useProcessData = () => {
     setprocessedData242(procesedData);
   };
 
-  useEffect(() => {
-    processData241();
-    processData242();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [leaderBoardData.Category]);
+  const processData243 = () => {
+    let generalScore243 = 100;
+    const data243 = [...sourceData[leaderBoardData.Category]];
+    const procesedData = data243
+      .sort((a, b) => {
+        const aData = a["24.3"];
+        const bData = b["24.3"];
+        const aTotalTime = convertToSeconds(aData.totalTime);
+        const bTotalTime = convertToSeconds(bData.totalTime);
+        const aWod1Time = convertToSeconds(aData.wod1Time);
+        const bWod1Time = convertToSeconds(bData.wod1Time);
+
+        // Si "finished" es true para ambos, ordena por "totalTime"
+        if (aData.finished && bData.finished) {
+          if (aTotalTime < bTotalTime) return -1;
+          if (aTotalTime > bTotalTime) return 1;
+        } else {
+          const aTotalTimeWithReps = aTotalTime + aData.remainingReps * 2;
+          const bTotalTimeWithReps = bTotalTime + bData.remainingReps * 2;
+          if (aTotalTimeWithReps === bTotalTimeWithReps) {
+            if (aWod1Time < bWod1Time) return -1;
+            if (aWod1Time > bWod1Time) return 1;
+          } else {
+            if (aTotalTimeWithReps < bTotalTimeWithReps) return -1;
+            if (aTotalTimeWithReps > bTotalTimeWithReps) return 1;
+          }
+        }
+
+        if (
+          aData.wod1Time === "0" &&
+          aData.totalTime === "0" &&
+          aData.remainingReps === 0
+        )
+          return 1;
+        if (
+          bData.wod1Time === "0" &&
+          bData.totalTime === "0" &&
+          bData.remainingReps === 0
+        )
+          return -1;
+
+        return 0;
+      })
+      .map((pd) => {
+        if (pd["24.3"].totalTime === "0" && pd["24.3"].wod1Time === "0") {
+          return { ...pd, finalScore: 0 };
+        } else {
+          const returnData = { ...pd, finalScore: generalScore243 };
+          generalScore243 -= 2;
+          return returnData;
+        }
+      });
+    setprocessedData243(procesedData);
+  };
 
   useEffect(() => {
     processData241();
@@ -102,7 +149,18 @@ const useProcessData = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [leaderBoardData.Category]);
 
-  const combinedData: PersonData[] = [...processedData241, ...processedData242];
+  useEffect(() => {
+    processData241();
+    processData242();
+    processData243();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [leaderBoardData.Category]);
+
+  const combinedData: PersonData[] = [
+    ...processedData241,
+    ...processedData242,
+    ...processedData243,
+  ];
 
   let result: PersonData[] = [];
 
@@ -132,6 +190,7 @@ const useProcessData = () => {
   return {
     processedData241,
     processedData242,
+    processedData243,
     processedAllDataWithFinalScore: result,
   };
 };

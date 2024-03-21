@@ -13,8 +13,12 @@ import React from "react";
 import useProcessData from "../../hooks/useProcessData";
 
 const DataTable = () => {
-  const { processedAllDataWithFinalScore, processedData241, processedData242 } =
-    useProcessData();
+  const {
+    processedAllDataWithFinalScore,
+    processedData241,
+    processedData242,
+    processedData243,
+  } = useProcessData();
 
   const getOrdinalSuffix = (i: number) => {
     const j = i % 10;
@@ -73,6 +77,12 @@ const DataTable = () => {
             const place24_2 = processedData242.findIndex(
               (pd) => pd.name === row.name
             );
+            const data24_3 = processedData243.find(
+              (pd) => pd.name === row.name
+            );
+            const place24_3 = processedData243.findIndex(
+              (pd) => pd.name === row.name
+            );
             return (
               <TableRow
                 key={row.name}
@@ -120,7 +130,29 @@ const DataTable = () => {
                   <Typography fontWeight={500}>{row["24.2"].score}</Typography>
                 </TableCell>
                 <TableCell>
-                  <Typography>-</Typography>
+                  <Stack direction="row" alignItems="center" spacing={1}>
+                    <Typography fontWeight={500} variant="h6">
+                      {getOrdinalSuffix(place24_3 + 1)}
+                    </Typography>
+                    <Typography fontWeight={500} variant="body2">
+                      ({data24_3?.finalScore} pts)
+                    </Typography>
+                  </Stack>
+                  <Stack>
+                    <Typography fontWeight={500}>
+                      {row["24.3"].finished
+                        ? row["24.3"].totalTime
+                        : `${row["24.3"].totalTime} | ${
+                            row["24.3"].wod1Time === "0"
+                              ? ``
+                              : `${row["24.3"].wod1Time} +`
+                          } ${
+                            row["24.3"].remainingReps === 0
+                              ? `0`
+                              : `${row["24.3"].remainingReps} reps restantes`
+                          } `}
+                    </Typography>
+                  </Stack>
                 </TableCell>
                 <TableCell>
                   <Typography>-</Typography>
