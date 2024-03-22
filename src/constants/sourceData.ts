@@ -85,7 +85,7 @@ export const sourceData: DataTypes = {
         reps: 0,
       },
       "24.2": {
-        score: 0,
+        score: 555,
       },
       "24.3": {
         wod1Time: "15:00",
@@ -139,10 +139,10 @@ export const sourceData: DataTypes = {
         score: 558,
       },
       "24.3": {
-        wod1Time: "0",
-        totalTime: "0",
+        wod1Time: "6:31",
+        totalTime: "15:00",
         finished: false,
-        remainingReps: 0,
+        remainingReps: 60,
       },
     },
     {
@@ -153,7 +153,7 @@ export const sourceData: DataTypes = {
         reps: 0,
       },
       "24.2": {
-        score: 0,
+        score: 710,
       },
       "24.3": {
         wod1Time: "7:15",
@@ -170,7 +170,7 @@ export const sourceData: DataTypes = {
         reps: 0,
       },
       "24.2": {
-        score: 0,
+        score: 427,
       },
       "24.3": {
         wod1Time: "14:39",
@@ -204,7 +204,7 @@ export const sourceData: DataTypes = {
         reps: 0,
       },
       "24.2": {
-        score: 0,
+        score: 521,
       },
       "24.3": {
         wod1Time: "11:32",
@@ -238,7 +238,7 @@ export const sourceData: DataTypes = {
         reps: 0,
       },
       "24.2": {
-        score: 0,
+        score: 532,
       },
       "24.3": {
         wod1Time: "10:55",
@@ -371,10 +371,10 @@ export const sourceData: DataTypes = {
       "24.1": {
         time: "0",
         completed: false,
-        reps: 0,
+        reps: 36,
       },
       "24.2": {
-        score: 0,
+        score: 450,
       },
       "24.3": {
         wod1Time: "9:55",
@@ -546,7 +546,7 @@ export const sourceData: DataTypes = {
         reps: 0,
       },
       "24.2": {
-        score: 0,
+        score: 704,
       },
       "24.3": {
         wod1Time: "6:31",
@@ -752,29 +752,12 @@ export const sourceData: DataTypes = {
         reps: 0,
       },
       "24.2": {
-        score: 0,
+        score: 450,
       },
       "24.3": {
         wod1Time: "0",
         totalTime: "7:15",
         finished: true,
-        remainingReps: 0,
-      },
-    },
-    {
-      name: "Nai",
-      "24.1": {
-        time: "0",
-        completed: false,
-        reps: 145,
-      },
-      "24.2": {
-        score: 500,
-      },
-      "24.3": {
-        wod1Time: "0",
-        totalTime: "0",
-        finished: false,
         remainingReps: 0,
       },
     },
@@ -811,6 +794,23 @@ export const sourceData: DataTypes = {
         wod1Time: "0",
         totalTime: "9:27",
         finished: true,
+        remainingReps: 0,
+      },
+    },
+    {
+      name: "Nai",
+      "24.1": {
+        time: "0",
+        completed: false,
+        reps: 145,
+      },
+      "24.2": {
+        score: 500,
+      },
+      "24.3": {
+        wod1Time: "0",
+        totalTime: "0",
+        finished: false,
         remainingReps: 0,
       },
     },
