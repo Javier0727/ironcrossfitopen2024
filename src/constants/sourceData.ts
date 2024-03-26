@@ -15,6 +15,11 @@ export type PersonData = {
     finished: boolean;
     remainingReps: number;
   };
+  "The Final"?: {
+    time: string;
+    completed: boolean;
+    reps: number;
+  };
 };
 
 type DataTypes = {
