@@ -49,10 +49,10 @@ export const sourceData: DataTypes = {
         remainingReps: 2,
       },
       "The Final": {
-        completed: false,
-        time: "0",
+        completed: true,
+        time: "8:26",
         reps: 0,
-        showScore: false,
+        showScore: true,
       },
     },
     {
@@ -72,10 +72,10 @@ export const sourceData: DataTypes = {
         remainingReps: 14,
       },
       "The Final": {
-        completed: false,
-        time: "0",
+        completed: true,
+        time: "7:55",
         reps: 0,
-        showScore: false,
+        showScore: true,
       },
     },
     {
@@ -95,10 +95,10 @@ export const sourceData: DataTypes = {
         remainingReps: 4,
       },
       "The Final": {
-        completed: false,
-        time: "0",
+        completed: true,
+        time: "8:37",
         reps: 0,
-        showScore: false,
+        showScore: true,
       },
     },
     {
@@ -119,9 +119,9 @@ export const sourceData: DataTypes = {
       },
       "The Final": {
         completed: false,
-        time: "0",
-        reps: 0,
-        showScore: false,
+        time: "10:00",
+        reps: 104,
+        showScore: true,
       },
     },
     {
@@ -142,9 +142,9 @@ export const sourceData: DataTypes = {
       },
       "The Final": {
         completed: false,
-        time: "0",
-        reps: 0,
-        showScore: false,
+        time: "10:00",
+        reps: 31,
+        showScore: true,
       },
     },
     {
@@ -165,9 +165,9 @@ export const sourceData: DataTypes = {
       },
       "The Final": {
         completed: false,
-        time: "0",
-        reps: 0,
-        showScore: false,
+        time: "10:00",
+        reps: 94,
+        showScore: true,
       },
     },
     {
@@ -188,9 +188,9 @@ export const sourceData: DataTypes = {
       },
       "The Final": {
         completed: false,
-        time: "0",
-        reps: 0,
-        showScore: false,
+        time: "10:00",
+        reps: 90,
+        showScore: true,
       },
     },
     {
