@@ -162,7 +162,7 @@ const DataTable = () => {
                   </Stack>
                 </TableCell>
                 <TableCell>
-                  {!!row["The Final"] ? (
+                  {!!row["The Final"] && row["The Final"].showScore ? (
                     <>
                       <Stack direction="row" alignItems="center" spacing={1}>
                         <Typography fontWeight={500} variant="h6">

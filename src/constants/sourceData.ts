@@ -19,6 +19,7 @@ export type PersonData = {
     completed: boolean;
     time: string;
     reps: number;
+    showScore: boolean;
   };
 };
 
@@ -51,6 +52,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -73,6 +75,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -95,6 +98,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -117,6 +121,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -139,6 +144,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -161,6 +167,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -183,6 +190,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -205,6 +213,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -227,6 +236,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -249,6 +259,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -460,6 +471,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -482,6 +494,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -504,6 +517,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -526,6 +540,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -548,6 +563,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -570,6 +586,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -592,6 +609,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -614,6 +632,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -636,6 +655,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -658,6 +678,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -840,6 +861,7 @@ export const sourceData: DataTypes = {
         completed: true,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -862,6 +884,7 @@ export const sourceData: DataTypes = {
         completed: true,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -884,6 +907,7 @@ export const sourceData: DataTypes = {
         completed: true,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -906,6 +930,7 @@ export const sourceData: DataTypes = {
         completed: true,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
   ],
@@ -930,6 +955,7 @@ export const sourceData: DataTypes = {
         completed: true,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -952,6 +978,7 @@ export const sourceData: DataTypes = {
         completed: false,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -974,6 +1001,7 @@ export const sourceData: DataTypes = {
         completed: true,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -996,6 +1024,7 @@ export const sourceData: DataTypes = {
         completed: true,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -1018,6 +1047,7 @@ export const sourceData: DataTypes = {
         completed: true,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -1040,6 +1070,7 @@ export const sourceData: DataTypes = {
         completed: true,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -1062,6 +1093,7 @@ export const sourceData: DataTypes = {
         completed: true,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -1084,6 +1116,7 @@ export const sourceData: DataTypes = {
         completed: true,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
     {
@@ -1106,6 +1139,7 @@ export const sourceData: DataTypes = {
         completed: true,
         time: "0",
         reps: 0,
+        showScore: false,
       },
     },
   ],
