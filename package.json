@@ -50,7 +50,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1",
-    "typescript": "https://typescript.visualstudio.com/cf7ac146-d525-443c-b23c-0d58337efebc/_apis/build/builds/158595/artifacts?artifactName=tgz&fileId=270C69279D28AEF93D4DDE7977504E51105F0019059428393EC2909809976A2202&fileName=/typescript-5.4.0-insiders.20231115.tgz"
+    "gh-pages": "^6.1.1"
   }
 }

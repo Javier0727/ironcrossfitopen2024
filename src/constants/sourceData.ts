@@ -16,8 +16,8 @@ export type PersonData = {
     remainingReps: number;
   };
   "The Final"?: {
-    time: string;
     completed: boolean;
+    time: string;
     reps: number;
   };
 };
@@ -32,20 +32,47 @@ type DataTypes = {
 export const sourceData: DataTypes = {
   RX: [
     {
-      name: "Suny",
+      name: "Lalo",
       "24.1": {
-        time: "9:07",
+        time: "9:10",
         completed: true,
         reps: 0,
       },
       "24.2": {
-        score: 570,
+        score: 720,
       },
       "24.3": {
-        wod1Time: "10:15",
+        wod1Time: "5:02",
         totalTime: "15:00",
         finished: false,
-        remainingReps: 63,
+        remainingReps: 2,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Majo",
+      "24.1": {
+        time: "8:12",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 661,
+      },
+      "24.3": {
+        wod1Time: "5:08",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 14,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
       },
     },
     {
@@ -64,22 +91,164 @@ export const sourceData: DataTypes = {
         finished: false,
         remainingReps: 4,
       },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
     },
     {
-      name: "Majo",
+      name: "Ceci",
       "24.1": {
-        time: "8:12",
+        time: "9:44",
         completed: true,
         reps: 0,
       },
       "24.2": {
-        score: 661,
+        score: 710,
       },
       "24.3": {
-        wod1Time: "5:08",
+        wod1Time: "7:15",
         totalTime: "15:00",
         finished: false,
-        remainingReps: 14,
+        remainingReps: 63,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Gio",
+      "24.1": {
+        time: "10:12",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 684,
+      },
+      "24.3": {
+        wod1Time: "7:38",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 48,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "David",
+      "24.1": {
+        time: "9:03",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 558,
+      },
+      "24.3": {
+        wod1Time: "6:31",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 60,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Suny",
+      "24.1": {
+        time: "9:07",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 570,
+      },
+      "24.3": {
+        wod1Time: "10:15",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 63,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Chris",
+      "24.1": {
+        time: "11:24",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 635,
+      },
+      "24.3": {
+        wod1Time: "8:03",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 60,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Jesus",
+      "24.1": {
+        time: "10:25",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 651,
+      },
+      "24.3": {
+        wod1Time: "14:58",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 70,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Suri",
+      "24.1": {
+        time: "10:25",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 554,
+      },
+      "24.3": {
+        wod1Time: "11:34",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 63,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
       },
     },
     {
@@ -114,57 +283,6 @@ export const sourceData: DataTypes = {
         totalTime: "0",
         finished: false,
         remainingReps: 0,
-      },
-    },
-    {
-      name: "Lalo",
-      "24.1": {
-        time: "9:10",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 720,
-      },
-      "24.3": {
-        wod1Time: "5:02",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 2,
-      },
-    },
-    {
-      name: "David",
-      "24.1": {
-        time: "9:03",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 558,
-      },
-      "24.3": {
-        wod1Time: "6:31",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 60,
-      },
-    },
-    {
-      name: "Ceci",
-      "24.1": {
-        time: "9:44",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 710,
-      },
-      "24.3": {
-        wod1Time: "7:15",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 63,
       },
     },
     {
@@ -253,74 +371,6 @@ export const sourceData: DataTypes = {
       },
     },
     {
-      name: "Suri",
-      "24.1": {
-        time: "10:25",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 554,
-      },
-      "24.3": {
-        wod1Time: "11:34",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 63,
-      },
-    },
-    {
-      name: "Jesus",
-      "24.1": {
-        time: "10:25",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 651,
-      },
-      "24.3": {
-        wod1Time: "14:58",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 70,
-      },
-    },
-    {
-      name: "Gio",
-      "24.1": {
-        time: "10:12",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 684,
-      },
-      "24.3": {
-        wod1Time: "7:38",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 48,
-      },
-    },
-    {
-      name: "Chris",
-      "24.1": {
-        time: "11:24",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 635,
-      },
-      "24.3": {
-        wod1Time: "8:03",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 60,
-      },
-    },
-    {
       name: "Kike",
       "24.1": {
         time: "12:39",
@@ -391,6 +441,226 @@ export const sourceData: DataTypes = {
   ],
   Scaled: [
     {
+      name: "Isa",
+      "24.1": {
+        time: "10:28",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 725,
+      },
+      "24.3": {
+        wod1Time: "0",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 60,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Daniel",
+      "24.1": {
+        time: "11:15",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 710,
+      },
+      "24.3": {
+        wod1Time: "8:38",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 40,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Conchita",
+      "24.1": {
+        time: "11:48",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 720,
+      },
+      "24.3": {
+        wod1Time: "0",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 48,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Sergio",
+      "24.1": {
+        time: "12:45",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 716,
+      },
+      "24.3": {
+        wod1Time: "8:22",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 40,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Memo",
+      "24.1": {
+        time: "14:16",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 827,
+      },
+      "24.3": {
+        wod1Time: "0",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 18,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Yessica",
+      "24.1": {
+        time: "9:56",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 704,
+      },
+      "24.3": {
+        wod1Time: "6:31",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 68,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Nohemi",
+      "24.1": {
+        time: "12:39",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 648,
+      },
+      "24.3": {
+        wod1Time: "0",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 9,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Claudia",
+      "24.1": {
+        time: "11:04",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 654,
+      },
+      "24.3": {
+        wod1Time: "7:04",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 63,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Marta",
+      "24.1": {
+        time: "11:38",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 645,
+      },
+      "24.3": {
+        wod1Time: "4:57",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 63,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
+      name: "Emiliano",
+      "24.1": {
+        time: "13:48",
+        completed: true,
+        reps: 0,
+      },
+      "24.2": {
+        score: 664,
+      },
+      "24.3": {
+        wod1Time: "0",
+        totalTime: "15:00",
+        finished: false,
+        remainingReps: 51,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
+      },
+    },
+    {
       name: "Yazmin",
       "24.1": {
         time: "13:25",
@@ -424,23 +694,7 @@ export const sourceData: DataTypes = {
         remainingReps: 63,
       },
     },
-    {
-      name: "Nohemi",
-      "24.1": {
-        time: "12:39",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 648,
-      },
-      "24.3": {
-        wod1Time: "0",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 9,
-      },
-    },
+
     {
       name: "Yaya",
       "24.1": {
@@ -456,40 +710,6 @@ export const sourceData: DataTypes = {
         totalTime: "15:00",
         finished: false,
         remainingReps: 63,
-      },
-    },
-    {
-      name: "Emiliano",
-      "24.1": {
-        time: "13:48",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 664,
-      },
-      "24.3": {
-        wod1Time: "0",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 51,
-      },
-    },
-    {
-      name: "Memo",
-      "24.1": {
-        time: "14:16",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 827,
-      },
-      "24.3": {
-        wod1Time: "0",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 18,
       },
     },
     {
@@ -509,23 +729,7 @@ export const sourceData: DataTypes = {
         remainingReps: 0,
       },
     },
-    {
-      name: "Isa",
-      "24.1": {
-        time: "10:28",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 725,
-      },
-      "24.3": {
-        wod1Time: "0",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 60,
-      },
-    },
+
     {
       name: "Berenice",
       "24.1": {
@@ -543,57 +747,7 @@ export const sourceData: DataTypes = {
         remainingReps: 0,
       },
     },
-    {
-      name: "Yessica",
-      "24.1": {
-        time: "9:56",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 704,
-      },
-      "24.3": {
-        wod1Time: "6:31",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 68,
-      },
-    },
-    {
-      name: "Marta",
-      "24.1": {
-        time: "11:38",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 645,
-      },
-      "24.3": {
-        wod1Time: "4:57",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 63,
-      },
-    },
-    {
-      name: "Sergio",
-      "24.1": {
-        time: "12:45",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 716,
-      },
-      "24.3": {
-        wod1Time: "8:22",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 40,
-      },
-    },
+
     {
       name: "Elizabeth",
       "24.1": {
@@ -611,23 +765,7 @@ export const sourceData: DataTypes = {
         remainingReps: 0,
       },
     },
-    {
-      name: "Daniel",
-      "24.1": {
-        time: "11:15",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 710,
-      },
-      "24.3": {
-        wod1Time: "8:38",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 40,
-      },
-    },
+
     {
       name: "Adiel",
       "24.1": {
@@ -645,23 +783,7 @@ export const sourceData: DataTypes = {
         remainingReps: 0,
       },
     },
-    {
-      name: "Claudia",
-      "24.1": {
-        time: "11:04",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 654,
-      },
-      "24.3": {
-        wod1Time: "7:04",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 63,
-      },
-    },
+
     {
       name: "Alma",
       "24.1": {
@@ -696,23 +818,6 @@ export const sourceData: DataTypes = {
         remainingReps: 0,
       },
     },
-    {
-      name: "Conchita",
-      "24.1": {
-        time: "11:48",
-        completed: true,
-        reps: 0,
-      },
-      "24.2": {
-        score: 720,
-      },
-      "24.3": {
-        wod1Time: "0",
-        totalTime: "15:00",
-        finished: false,
-        remainingReps: 48,
-      },
-    },
   ],
   "Kids 8 a 10 años": [
     {
@@ -731,6 +836,11 @@ export const sourceData: DataTypes = {
         finished: true,
         remainingReps: 0,
       },
+      "The Final": {
+        completed: true,
+        time: "0",
+        reps: 0,
+      },
     },
     {
       name: "Lian",
@@ -747,6 +857,11 @@ export const sourceData: DataTypes = {
         totalTime: "5:44",
         finished: true,
         remainingReps: 0,
+      },
+      "The Final": {
+        completed: true,
+        time: "0",
+        reps: 0,
       },
     },
     {
@@ -765,6 +880,11 @@ export const sourceData: DataTypes = {
         finished: true,
         remainingReps: 0,
       },
+      "The Final": {
+        completed: true,
+        time: "0",
+        reps: 0,
+      },
     },
     {
       name: "Dana",
@@ -781,6 +901,11 @@ export const sourceData: DataTypes = {
         totalTime: "5:28",
         finished: true,
         remainingReps: 0,
+      },
+      "The Final": {
+        completed: true,
+        time: "0",
+        reps: 0,
       },
     },
   ],
@@ -801,6 +926,11 @@ export const sourceData: DataTypes = {
         finished: true,
         remainingReps: 0,
       },
+      "The Final": {
+        completed: true,
+        time: "0",
+        reps: 0,
+      },
     },
     {
       name: "Nai",
@@ -817,6 +947,11 @@ export const sourceData: DataTypes = {
         totalTime: "0",
         finished: false,
         remainingReps: 0,
+      },
+      "The Final": {
+        completed: false,
+        time: "0",
+        reps: 0,
       },
     },
     {
@@ -835,6 +970,11 @@ export const sourceData: DataTypes = {
         finished: true,
         remainingReps: 0,
       },
+      "The Final": {
+        completed: true,
+        time: "0",
+        reps: 0,
+      },
     },
     {
       name: "Takko",
@@ -851,6 +991,11 @@ export const sourceData: DataTypes = {
         totalTime: "14:33",
         finished: true,
         remainingReps: 0,
+      },
+      "The Final": {
+        completed: true,
+        time: "0",
+        reps: 0,
       },
     },
     {
@@ -869,6 +1014,11 @@ export const sourceData: DataTypes = {
         finished: true,
         remainingReps: 0,
       },
+      "The Final": {
+        completed: true,
+        time: "0",
+        reps: 0,
+      },
     },
     {
       name: "Julian",
@@ -885,6 +1035,11 @@ export const sourceData: DataTypes = {
         totalTime: "9:18",
         finished: true,
         remainingReps: 0,
+      },
+      "The Final": {
+        completed: true,
+        time: "0",
+        reps: 0,
       },
     },
     {
@@ -903,6 +1058,11 @@ export const sourceData: DataTypes = {
         finished: true,
         remainingReps: 0,
       },
+      "The Final": {
+        completed: true,
+        time: "0",
+        reps: 0,
+      },
     },
     {
       name: "Daniela",
@@ -920,6 +1080,11 @@ export const sourceData: DataTypes = {
         finished: true,
         remainingReps: 0,
       },
+      "The Final": {
+        completed: true,
+        time: "0",
+        reps: 0,
+      },
     },
     {
       name: "Gustavo",
@@ -936,6 +1101,11 @@ export const sourceData: DataTypes = {
         totalTime: "14:38",
         finished: true,
         remainingReps: 0,
+      },
+      "The Final": {
+        completed: true,
+        time: "0",
+        reps: 0,
       },
     },
   ],

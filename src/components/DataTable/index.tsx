@@ -18,6 +18,7 @@ const DataTable = () => {
     processedData241,
     processedData242,
     processedData243,
+    processedDataTheFinal,
   } = useProcessData();
 
   const getOrdinalSuffix = (i: number) => {
@@ -81,6 +82,12 @@ const DataTable = () => {
               (pd) => pd.name === row.name
             );
             const place24_3 = processedData243.findIndex(
+              (pd) => pd.name === row.name
+            );
+            const dataTheFinal = processedDataTheFinal.find(
+              (pd) => pd.name === row.name
+            );
+            const placeTheFinal = processedDataTheFinal.findIndex(
               (pd) => pd.name === row.name
             );
             return (
@@ -155,7 +162,27 @@ const DataTable = () => {
                   </Stack>
                 </TableCell>
                 <TableCell>
-                  <Typography>-</Typography>
+                  {!!row["The Final"] ? (
+                    <>
+                      <Stack direction="row" alignItems="center" spacing={1}>
+                        <Typography fontWeight={500} variant="h6">
+                          {getOrdinalSuffix(placeTheFinal + 1)}
+                        </Typography>
+                        <Typography fontWeight={500} variant="body2">
+                          ({dataTheFinal?.finalScore} pts)
+                        </Typography>
+                      </Stack>
+                      <Stack>
+                        <Typography fontWeight={500}>
+                          {row["The Final"].completed
+                            ? row["The Final"].time
+                            : `${row["The Final"].reps} reps`}
+                        </Typography>
+                      </Stack>
+                    </>
+                  ) : (
+                    "-"
+                  )}
                 </TableCell>
                 <TableCell>
                   <Typography>{row.finalScore}</Typography>

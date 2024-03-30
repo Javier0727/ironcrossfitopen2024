@@ -7,6 +7,9 @@ const useProcessData = () => {
   const [processedData241, setprocessedData241] = useState<PersonData[]>([]);
   const [processedData242, setprocessedData242] = useState<PersonData[]>([]);
   const [processedData243, setprocessedData243] = useState<PersonData[]>([]);
+  const [processedDataTheFinal, setprocessedDataTheFinal] = useState<
+    PersonData[]
+  >([]);
 
   const convertToSeconds = (time: string) => {
     const [minutes, seconds] = time.split(":").map(Number);
@@ -143,16 +146,52 @@ const useProcessData = () => {
     setprocessedData243(procesedData);
   };
 
-  useEffect(() => {
-    processData241();
-    processData242();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [leaderBoardData.Category]);
+  const processDataTheFinal = () => {
+    let generalScoreTheFinal = 100;
+    const dataTheFinal = [...sourceData[leaderBoardData.Category]];
+    const procesedData = dataTheFinal
+      .sort((a, b) => {
+        const aData = a["The Final"];
+        const bData = b["The Final"];
+        if (aData === undefined || bData === undefined) {
+          return 0;
+        } else {
+          // Convertir el tiempo a segundos para la comparación
+          const timeA =
+            aData.time === "0" ? Infinity : convertToSeconds(aData.time);
+          const timeB =
+            bData.time === "0" ? Infinity : convertToSeconds(bData.time);
+
+          // Ordenar por tiempo
+          if (timeA < timeB) return -1;
+          if (timeA > timeB) return 1;
+
+          // Si el tiempo es igual, ordenar por puntaje de mayor a menor
+          if (aData.reps > bData.reps) return -1;
+          if (aData.reps < bData.reps) return 1;
+        }
+        return 0;
+      })
+      .map((pd) => {
+        if (!!pd["The Final"]) {
+          if (pd["The Final"]?.time === "0" && pd["The Final"]?.reps === 0) {
+            return { ...pd, finalScore: 0 };
+          }
+          const returnData = { ...pd, finalScore: generalScoreTheFinal };
+          generalScoreTheFinal -= 2;
+          return returnData;
+        } else {
+          return { ...pd, finalScore: 0 };
+        }
+      });
+    setprocessedDataTheFinal(procesedData);
+  };
 
   useEffect(() => {
     processData241();
     processData242();
     processData243();
+    processDataTheFinal();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [leaderBoardData.Category]);
 
@@ -160,6 +199,7 @@ const useProcessData = () => {
     ...processedData241,
     ...processedData242,
     ...processedData243,
+    ...processedDataTheFinal,
   ];
 
   let result: PersonData[] = [];
@@ -191,6 +231,7 @@ const useProcessData = () => {
     processedData241,
     processedData242,
     processedData243,
+    processedDataTheFinal,
     processedAllDataWithFinalScore: result,
   };
 };
