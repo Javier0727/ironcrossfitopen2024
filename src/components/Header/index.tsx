@@ -21,7 +21,7 @@ const Header = () => {
           />
         </Box>
         <Typography variant="h6" component="div">
-          Iron Crossfit - Open 2024
+          Iron Crossfit - Open 2025
         </Typography>
       </Toolbar>
     </AppBar>
