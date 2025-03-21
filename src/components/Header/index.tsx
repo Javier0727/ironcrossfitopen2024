@@ -4,7 +4,7 @@ import Logo from "../../images/ironLogo.jpg";
 
 const Header = () => {
   return (
-    <AppBar sx={{ bgcolor: "#191919" }} position="static">
+    <AppBar sx={{ bgcolor: "#1A1A1A" }} position="static">
       <Toolbar>
         <Box mr={2} borderRadius="100%" width="3rem" height="3rem">
           <img
@@ -21,7 +21,7 @@ const Header = () => {
           />
         </Box>
         <Typography variant="h6" component="div">
-          Iron Crossfit - Open 2024
+          Iron Crossfit - Open 2025
         </Typography>
       </Toolbar>
     </AppBar>
