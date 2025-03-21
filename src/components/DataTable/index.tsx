@@ -22,7 +22,6 @@ import { Category, Center } from "../../interfaces/AthleteData";
 const DataTable = () => {
   const { leaderBoardData } = useContext(LeaderBoardContext);
   const { rankedByCategoryAndCenter } = useProcessEventData(athletes25);
-  console.log("rankedByCategoryAndCenter", rankedByCategoryAndCenter);
 
   const getOrdinalSuffix = (i: number) => {
     const j = i % 10;

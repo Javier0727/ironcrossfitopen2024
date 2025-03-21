@@ -1,6 +1,13 @@
 "use client";
 
-import { Box, MenuItem, Stack, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  ButtonBase,
+  MenuItem,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { useContext } from "react";
 import {
   BOX_CENTER,
@@ -33,21 +40,42 @@ const LeaderBoard = () => {
         sx={{
           backgroundImage: `url(${Banner})`,
           backgroundSize: "cover",
-          backgroundPosition: "center -32rem",
+          backgroundPosition: { xs: "center", md: "center -32rem" },
           backgroundRepeat: "no-repeat",
         }}
         padding={3}
       >
         <Stack spacing={1} mt={10}>
-          <Box
-            p={1}
-            bgcolor="#1A1A1A"
-            borderRadius={2}
-            width="fit-content"
-            border={`1px solid #FBBC41`}
-          >
-            <Typography color="#FBBC41">2025 Open Iron Season</Typography>
-          </Box>
+          <Stack direction={"row"} spacing={2} alignItems={"center"}>
+            <Box
+              p={1}
+              bgcolor="#1A1A1A"
+              borderRadius={2}
+              width="fit-content"
+              border={`1px solid #FBBC41`}
+            >
+              <Typography color="#FBBC41">2025 Open Iron Season</Typography>
+            </Box>
+            <Box
+              component={ButtonBase}
+              p={1}
+              bgcolor="#1A1A1A"
+              borderRadius={2}
+              width="fit-content"
+              border={`1px solid #FBBC41`}
+              onClick={() =>
+                window.open(
+                  "https://www.instagram.com/las.fotosdejavi?igsh=MXdva3hhMDJsZnd0bg%3D%3D&utm_source=qr",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
+              <Typography color="#FBBC41">
+                <b>Javi</b> Insta
+              </Typography>
+            </Box>
+          </Stack>
           <Typography
             variant="h1"
             color="white"

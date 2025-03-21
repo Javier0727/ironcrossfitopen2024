@@ -27,19 +27,20 @@ const compareByTimeOrReps = (
   const aTime = convertToSeconds(a[event].time);
   const bTime = convertToSeconds(b[event].time);
 
-  // Caso 1: Ambos terminaron antes del tiempo límite -> ordenar por tiempo
-  if (aTime < eventLimit && bTime < eventLimit) {
-    return aTime - bTime;
+  const aFinished = aTime < eventLimit;
+  const bFinished = bTime < eventLimit;
+
+  // Priorizar a los atletas que sí terminaron
+  if (aFinished && bFinished) {
+    return aTime - bTime; // Ordenar por menor tiempo
   }
+  if (aFinished) return -1; // Si A terminó y B no, A es mejor
+  if (bFinished) return 1; // Si B terminó y A no, B es mejor
 
-  // Caso 2: Uno terminó antes y otro no -> el que terminó antes es mejor
-  if (aTime < eventLimit) return -1;
-  if (bTime < eventLimit) return 1;
-
-  // Caso 3: Ninguno terminó -> ordenar por repeticiones
+  // Si ninguno terminó, ordenar por repeticiones
   if (a[event].reps !== b[event].reps) return b[event].reps - a[event].reps;
 
-  // Caso 4: Empate en repeticiones -> desempatar por checkpoints
+  // Si hay empate en repeticiones, usar checkpoints
   for (let i = 0; i < a[event].checkpoints.length; i++) {
     const aCheckpoint = convertToSeconds(a[event].checkpoints[i]);
     const bCheckpoint = convertToSeconds(b[event].checkpoints[i]);
@@ -139,9 +140,7 @@ export const useProcessEventData = (athletes: AthleteData[]) => {
                 ? athlete[event].reps
                 : athlete[event].time ?? athlete[event].reps;
 
-            if (previousScore === null || currentScore !== previousScore) {
-              rankCounter = index + 1;
-            }
+            rankCounter = index + 1;
 
             found.eventRanks[event] = { rank: rankCounter, score: points };
             found.finalScore += points;
