@@ -6,9 +6,8 @@ import {
   BOX_CENTER,
   CATEGORIES25,
   LeaderBoardContext,
-  WODS25,
 } from "../../Contexts/LeaderBoardContext";
-import { BOX, CATEGORIES25LIST, WODS } from "../../constants";
+import { BOX, CATEGORIES25LIST } from "../../constants";
 import Banner from "../../images/IronCrossfitBanner25.png";
 import DataTable from "../DataTable";
 
@@ -25,12 +24,8 @@ const styledTextFieldSx = {
 };
 
 const LeaderBoard = () => {
-  const {
-    handleChangeCategory,
-    handleChangeWOD,
-    handleChangeBoxCenter,
-    leaderBoardData,
-  } = useContext(LeaderBoardContext);
+  const { handleChangeCategory, handleChangeBoxCenter, leaderBoardData } =
+    useContext(LeaderBoardContext);
 
   return (
     <Box>
@@ -44,7 +39,15 @@ const LeaderBoard = () => {
         padding={3}
       >
         <Stack spacing={1} mt={10}>
-          <Typography color="#FBBC41">2025 Open Iron Season</Typography>
+          <Box
+            p={1}
+            bgcolor="#1A1A1A"
+            borderRadius={2}
+            width="fit-content"
+            border={`1px solid #FBBC41`}
+          >
+            <Typography color="#FBBC41">2025 Open Iron Season</Typography>
+          </Box>
           <Typography
             variant="h1"
             color="white"
@@ -72,40 +75,54 @@ const LeaderBoard = () => {
               </MenuItem>
             ))}
           </TextField>
-          <TextField
-            select
-            label="Selecciona el WOD"
-            defaultValue={WODS[0].id}
-            value={leaderBoardData.Wod}
-            onChange={(e) => handleChangeWOD(e.target.value as WODS25)}
-            sx={styledTextFieldSx}
-          >
-            {WODS.map((wod) => (
-              <MenuItem key={wod.id} value={wod.name} color="white">
-                {wod.name}
-              </MenuItem>
-            ))}
-          </TextField>
-          <TextField
-            select
-            label="Selecciona la categoría"
-            defaultValue={CATEGORIES25LIST[0].id}
-            value={leaderBoardData.Category}
-            onChange={(e) =>
-              handleChangeCategory(e.target.value as CATEGORIES25)
-            }
-            sx={styledTextFieldSx}
-          >
-            {CATEGORIES25LIST.map((category) => (
-              <MenuItem key={category.id} value={category.name}>
-                {category.name}
-              </MenuItem>
-            ))}
-          </TextField>
+          {leaderBoardData.boxCenter !== null &&
+            leaderBoardData.boxCenter !== BOX_CENTER.FORCE && (
+              <TextField
+                select
+                label="Selecciona la categoría"
+                defaultValue={CATEGORIES25LIST[0].id}
+                value={leaderBoardData.Category}
+                onChange={(e) =>
+                  handleChangeCategory(e.target.value as CATEGORIES25)
+                }
+                sx={styledTextFieldSx}
+              >
+                {CATEGORIES25LIST.map((category) => (
+                  <MenuItem key={category.id} value={category.name}>
+                    {category.name}
+                  </MenuItem>
+                ))}
+              </TextField>
+            )}
         </Stack>
       </Box>
       <Box padding={3}>
-        <DataTable />
+        {leaderBoardData.boxCenter !== BOX_CENTER.FORCE ? (
+          leaderBoardData.boxCenter !== null &&
+          leaderBoardData.Category !== null ? (
+            <DataTable />
+          ) : (
+            <Stack
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              spacing={2}
+            >
+              <Typography variant="h4">
+                Selecciona un Centro de Entrenamiento y una Categoría
+              </Typography>
+            </Stack>
+          )
+        ) : (
+          <Stack
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            spacing={2}
+          >
+            <Typography variant="h4">Proximamente</Typography>
+          </Stack>
+        )}
       </Box>
     </Box>
   );

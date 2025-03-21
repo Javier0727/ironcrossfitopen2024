@@ -2,10 +2,11 @@
   "name": "ironcrossfitopen",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://javier0727.github.io/ironcrossfitopen2024/",
+  "homepage": "https://javier0727.github.io/ironcrossfitopen/",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
+    "@fontsource/poppins": "^5.2.5",
     "@fontsource/roboto": "^5.0.12",
     "@mui/icons-material": "^5.15.11",
     "@mui/material": "^5.15.11",

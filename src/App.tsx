@@ -7,7 +7,7 @@ import LeaderBoard from "./components/LeaderBoard";
 function App() {
   return (
     <LeaderBoardProvider>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1, fontFamily: 'Poppins, sans-serif' }}>
         <Header />
         <LeaderBoard />
       </Box>

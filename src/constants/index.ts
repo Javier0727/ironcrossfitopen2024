@@ -1,7 +1,7 @@
 export const BOX = [
   {
     id: "1",
-    name: "Iron Crossfit",
+    name: "Iron",
   },
   {
     id: "2",
@@ -11,12 +11,20 @@ export const BOX = [
     id: "3",
     name: "La Aldea",
   },
+  {
+    id: "5",
+    name: "Iron Force",
+  },
 ];
 
 export const WODS = [
   {
     id: "1",
-    name: "24.1",
+    name: "25.1",
+  },
+  {
+    id: "2",
+    name: "25.2",
   },
 ];
 

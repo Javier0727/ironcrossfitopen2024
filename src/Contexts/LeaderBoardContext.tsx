@@ -1,9 +1,10 @@
 import React, { createContext, useState } from "react";
 
 export enum BOX_CENTER {
-  IRON = "Iron Crossfit",
+  IRON = "Iron",
   CAR = "CAR",
   ALDEA = "La Aldea",
+  FORCE = "Iron Force",
 }
 
 export enum WODS24 {
