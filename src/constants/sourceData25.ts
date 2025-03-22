@@ -174,14 +174,72 @@ export const athletes25: AthleteData[] = [
     center: Center.ALDEA,
     category: Category.Scaled,
     "25.1": {
-      reps: 289
+      reps: 289,
     },
     "25.2": {
-      reps: 0, checkpoints: ["0:00", "0:00"], time: "13:10"
+      reps: 158,
+      checkpoints: ["12:00", "12:00"],
+      time: "12:00",
     },
     "25.3": {
-      reps: 0, checkpoints: ["0:00", "0:00", "0:00", "0:00", "0:00"], time: "16:25"
-    }
+      reps: 0,
+      checkpoints: ["0:00", "0:00", "0:00", "0:00", "0:00"],
+      time: "16:25",
+    },
+  },
+  {
+    name: "Tania",
+    center: Center.ALDEA,
+    category: Category.Scaled,
+    "25.1": {
+      reps: 147,
+    },
+    "25.2": {
+      reps: 157,
+      checkpoints: ["12:00", "12:00"],
+      time: "12:00",
+    },
+    "25.3": {
+      reps: 0,
+      checkpoints: ["0:00", "0:00", "0:00", "0:00", "0:00"],
+      time: "19:20",
+    },
+  },
+  {
+    name: "Erick",
+    center: Center.ALDEA,
+    category: Category.Scaled,
+    "25.1": {
+      reps: 187,
+    },
+    "25.2": {
+      reps: 150,
+      checkpoints: ["12:00", "12:00"],
+      time: "12:00",
+    },
+    "25.3": {
+      reps: 0,
+      checkpoints: ["0:00", "0:00", "0:00", "0:00", "0:00"],
+      time: "14:33",
+    },
+  },
+  {
+    name: "Dania",
+    center: Center.ALDEA,
+    category: Category.Scaled,
+    "25.1": {
+      reps: 141,
+    },
+    "25.2": {
+      reps: 0,
+      checkpoints: ["0:00", "0:00"],
+      time: "0:00",
+    },
+    "25.3": {
+      reps: 0,
+      checkpoints: ["0:00", "0:00", "0:00", "0:00", "0:00"],
+      time: "0:00",
+    },
   },
   {
     name: "Esperanza Serralde",
