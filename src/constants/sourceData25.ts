@@ -170,6 +170,20 @@ export const athletes25: AthleteData[] = [
     },
   },
   {
+    name: "Josue",
+    center: Center.ALDEA,
+    category: Category.Scaled,
+    "25.1": {
+      reps: 289
+    },
+    "25.2": {
+      reps: 0, checkpoints: ["0:00", "0:00"], time: "13:10"
+    },
+    "25.3": {
+      reps: 0, checkpoints: ["0:00", "0:00", "0:00", "0:00", "0:00"], time: "16:25"
+    }
+  },
+  {
     name: "Esperanza Serralde",
     center: Center.IRON,
     category: Category.Scaled,
@@ -282,7 +296,7 @@ export const athletes25: AthleteData[] = [
     center: Center.IRON,
     category: Category.Scaled,
     "25.1": { reps: 167 },
-    "25.2": { reps: 152, checkpoints: ["12:00", "12:00"], time: "12:00" },
+    "25.2": { reps: 157, checkpoints: ["12:00", "12:00"], time: "12:00" },
     "25.3": {
       time: "18:00",
       reps: 0,
