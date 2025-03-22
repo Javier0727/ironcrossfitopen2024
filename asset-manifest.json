@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ironcrossfitopen2024/static/css/main.e79083b3.css",
-    "main.js": "/ironcrossfitopen2024/static/js/main.01b69ea1.js",
+    "main.js": "/ironcrossfitopen2024/static/js/main.09d91667.js",
     "static/js/453.264d0789.chunk.js": "/ironcrossfitopen2024/static/js/453.264d0789.chunk.js",
     "static/media/IronCrossfitBanner25.png": "/ironcrossfitopen2024/static/media/IronCrossfitBanner25.1e23a753d9d51c3d7391.png",
     "static/media/ironLogo.jpg": "/ironcrossfitopen2024/static/media/ironLogo.382a242c4b7ebc8228ed.jpg",
@@ -71,11 +71,11 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/ironcrossfitopen2024/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/ironcrossfitopen2024/index.html",
     "main.e79083b3.css.map": "/ironcrossfitopen2024/static/css/main.e79083b3.css.map",
-    "main.01b69ea1.js.map": "/ironcrossfitopen2024/static/js/main.01b69ea1.js.map",
+    "main.09d91667.js.map": "/ironcrossfitopen2024/static/js/main.09d91667.js.map",
     "453.264d0789.chunk.js.map": "/ironcrossfitopen2024/static/js/453.264d0789.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e79083b3.css",
-    "static/js/main.01b69ea1.js"
+    "static/js/main.09d91667.js"
   ]
 }
